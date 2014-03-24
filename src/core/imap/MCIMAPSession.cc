@@ -1442,7 +1442,8 @@ Array * /* IMAPFolder */ IMAPSession::fetchAllFolders(ErrorCode * pError)
         Array * inboxResult = resultsWithError(r, imap_folders, pError);
         if (* pError == ErrorConnection)
             mShouldDisconnect = true;
-        result->addObjectsFromArray(inboxResult);
+        if(result)
+            result->addObjectsFromArray(inboxResult);
     }
     
     return result;
