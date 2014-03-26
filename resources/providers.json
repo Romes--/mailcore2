@@ -1,4 +1,32 @@
 {
+    "web.de":{
+        "servers":{
+            "imap":[
+                    {
+                    "port":993,
+                    "hostname":"imap.web.de",
+                    "ssl":true
+                    }
+                    ],
+            "smtp":[
+                    {
+                    "port":587,
+                    "hostname":"smtp.web.de",
+                    "starttls":true
+                    }
+                    ]
+        },
+        "domain-match":[
+                        "web\\.de"
+                        ],
+        "mailboxes":{
+            "drafts":"Drafts",
+            "allmail":"Archive",
+            "spam":"Junk",
+            "sentmail":"Sent Messages",
+            "trash":"Deleted Messages"
+        }
+    },
     "mobileme":{
         "servers":{
             "imap":[
