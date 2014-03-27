@@ -3017,7 +3017,7 @@
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(IOS_LIBRARY_SEARCH_PATHS)";
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(IOS_LIBRARY_SEARCH_PATHS)";
 				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "$(OSX_LIBRARY_SEARCH_PATHS)";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				OSX_HEADERS_SEARCH_PATHS = "\"$(SRCROOT)/../Externals/libetpan/include\" \"$(SRCROOT)/../Externals/icu4c/include\" \"$(SRCROOT)/../Externals/ctemplate/include\" /usr/include/tidy /usr/include/libxml2";
 				OSX_LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../Externals/libetpan/lib\" \"$(SRCROOT)/../Externals/icu4c/lib\" \"$(SRCROOT)/../Externals/ctemplate/lib\"";
@@ -3066,7 +3066,7 @@
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(IOS_LIBRARY_SEARCH_PATHS)";
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(IOS_LIBRARY_SEARCH_PATHS)";
 				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "$(OSX_LIBRARY_SEARCH_PATHS)";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OSX_HEADERS_SEARCH_PATHS = "\"$(SRCROOT)/../Externals/libetpan/include\" \"$(SRCROOT)/../Externals/icu4c/include\" \"$(SRCROOT)/../Externals/ctemplate/include\" /usr/include/tidy /usr/include/libxml2";
 				OSX_LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../Externals/libetpan/lib\" \"$(SRCROOT)/../Externals/icu4c/lib\" \"$(SRCROOT)/../Externals/ctemplate/lib\"";
 				SKIP_INSTALL = YES;
@@ -3195,6 +3195,7 @@
 				CLANG_CXX_LIBRARY = "libstdc++";
 				DEAD_CODE_STRIPPING = NO;
 				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "MailCore-ios";
 				SDKROOT = iphoneos;
@@ -3211,6 +3212,7 @@
 				CLANG_CXX_LIBRARY = "libstdc++";
 				DEAD_CODE_STRIPPING = NO;
 				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "MailCore-ios";
 				SDKROOT = iphoneos;
