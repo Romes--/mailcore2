@@ -43,6 +43,7 @@ void IMAPMultiDisconnectOperation::start()
 void IMAPMultiDisconnectOperation::operationFinished(Operation * op)
 {
     _count ++;
+    if(_operations)
     if (_count == _operations->count()) {
         callback()->operationFinished(this);
     }
