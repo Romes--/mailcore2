@@ -131,6 +131,9 @@ void OperationQueue::runOperations()
 void OperationQueue::performOnCallbackThread(Operation * op, Method method, void * context, bool waitUntilDone)
 {
 #if __APPLE__
+    if(op==NULL)
+        return;
+    
     dispatch_queue_t queue = op->callbackDispatchQueue();
     if (queue == NULL) {
         queue = dispatch_get_main_queue();
@@ -153,7 +156,8 @@ void OperationQueue::callbackOnMainThread(Operation * op)
     if (op->isCancelled())
         return;
     
-    if (op->callback() != NULL) {
+    if (op->callback() != NULL)
+    {
         op->callback()->operationFinished(op);
     }
 }

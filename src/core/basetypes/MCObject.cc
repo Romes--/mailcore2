@@ -152,7 +152,8 @@ static void removeFromPerformHash(Object * obj, Object::Method method, void * co
     struct mainThreadCallKeyData keyData;
     Object * queueIdentifier = NULL;
 #if __APPLE__
-    queueIdentifier = (String *) dispatch_queue_get_specific((dispatch_queue_t) targetDispatchQueue, "MCDispatchQueueID");
+    if(targetDispatchQueue!=NULL)
+        queueIdentifier = (String *) dispatch_queue_get_specific((dispatch_queue_t) targetDispatchQueue, "MCDispatchQueueID");
 #endif
     memset(&keyData, 0, sizeof(keyData));
     keyData.dispatchQueueIdentifier = queueIdentifier;
