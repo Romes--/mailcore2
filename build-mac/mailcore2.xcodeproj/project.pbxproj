@@ -3247,6 +3247,7 @@
 				);
 				PRODUCT_NAME = MailCore;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -3280,6 +3281,7 @@
 				);
 				PRODUCT_NAME = MailCore;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
