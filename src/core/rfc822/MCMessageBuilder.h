@@ -39,12 +39,16 @@ namespace mailcore {
         virtual String * boundaryPrefix();
         
         virtual Data * data();
+        virtual Data * dataForEncryption();
         
         virtual String * htmlRendering(HTMLRendererTemplateCallback * htmlCallback = NULL);
         virtual String * htmlBodyRendering();
         
         virtual String * plainTextRendering();
         virtual String * plainTextBodyRendering(bool stripWhitespace);
+        
+        virtual Data * openPGPSignedMessageDataWithSignatureData(Data * signature);
+        virtual Data * openPGPEncryptedMessageDataWithEncryptedData(Data * encryptedData);
         
     public: // subclass behavior
         MessageBuilder(MessageBuilder * other);
@@ -58,7 +62,8 @@ namespace mailcore {
         Array * /* Attachment */ mRelatedAttachments;
         String * mBoundaryPrefix;
         void init();
-        Data * dataAndFilterBcc(bool filterBcc);
+        Data * dataAndFilterBccAndForEncryption(bool filterBcc, bool forEncryption);
+        struct mailmime * mimeAndFilterBccAndForEncryption(bool filterBcc, bool forEncryption);
     };
     
 };
