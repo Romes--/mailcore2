@@ -1,4 +1,59 @@
 {
+    "posteo":{
+        "servers":{
+            "imap":[
+                    {
+                    "port":993,
+                    "hostname":"posteo.de",
+                    "ssl":true
+                    }
+                    ],
+            "smtp":[
+                    {
+                    "port":465,
+                    "hostname":"posteo.de",
+                    "ssl":true
+                    }
+                    ]
+        },
+        "domain-match":[
+                        "posteo\\..*"
+                        ],
+        "mailboxes":{
+            "drafts":"Drafts",
+            "sentmail":"Sent",
+            "trash":"Trash"
+        }
+    },
+    "web.de":{
+        "servers":{
+            "imap":[
+                    {
+                    "port":993,
+                    "hostname":"imap.web.de",
+                    "ssl":true
+                    }
+                    ],
+            "smtp":[
+                    {
+                    "port":587,
+                    "hostname":"smtp.web.de",
+                    "starttls":true
+                    }
+                    ]
+        },
+        "domain-match":[
+                        "web\\.de"
+                        ],
+        "mailboxes":{
+            "drafts":"Drafts",
+            "allmail":"Archive",
+            "spam":"Junk",
+            "sentmail":"Sent Messages",
+            "trash":"Deleted Messages"
+        }
+    },
+
     "hushmail":{
         "servers":{
             "imap":[
