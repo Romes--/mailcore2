@@ -152,14 +152,21 @@ namespace mailcore {
     
     static inline bool HashMapIteratorNext(HashMapIterator * iterator, Object ** keyp, Object ** valuep)
     {
+        if(iterator==NULL)
+            return false;
+
         if (iterator->index >= iterator->count) {
             return false;
         }
         
-        if (keyp != NULL) {
+        if (keyp != NULL)
+            if(iterator->keys!=NULL)
+        {
             * keyp = iterator->keys->objectAtIndex(iterator->index);
         }
-        if (valuep != NULL) {
+        if (valuep != NULL)
+            if(iterator->values!=NULL)
+        {
             * valuep = iterator->values->objectAtIndex(iterator->index);
         }
         iterator->index ++;

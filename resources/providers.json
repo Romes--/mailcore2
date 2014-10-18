@@ -164,6 +164,62 @@
             "trash":"Deleted Messages"
         }
     },
+    "advokat":{
+        "servers":{
+            "imap":[
+                    {
+                    "port":993,
+                    "hostname":"mail51.mittwald.de",
+                    "ssl":true
+                    }
+                    ],
+            "smtp":[
+                    {
+                    "port":465,
+                    "hostname":"mail51.mittwald.de",
+                    "ssl":true
+                    }
+                    ]
+        },
+        "domain-match":[
+                        "advokat\\.de"
+                        ],
+        "mailboxes":{
+            "drafts":"Drafts",
+            "allmail":"Archive",
+            "spam":"Junk",
+            "sentmail":"Sent Messages",
+            "trash":"Deleted Messages"
+        }
+    },
+    "mynigma":{
+        "servers":{
+            "imap":[
+                    {
+                    "port":993,
+                    "hostname":"imap.zoho.com",
+                    "ssl":true
+                    }
+                    ],
+            "smtp":[
+                    {
+                    "port":465,
+                    "hostname":"smtp.zoho.com",
+                    "ssl":true
+                    }
+                    ]
+        },
+        "domain-match":[
+                        "mynigma\\.org"
+                        ],
+        "mailboxes":{
+            "drafts":"Drafts",
+            "allmail":"Archive",
+            "spam":"Junk",
+            "sentmail":"Sent Messages",
+            "trash":"Deleted Messages"
+        }
+    },
     "dreamhost":{
         "servers":{
             "imap":[

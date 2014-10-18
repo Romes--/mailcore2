@@ -603,6 +603,12 @@ void IMAPSession::connect(ErrorCode * pError)
 
         default:
         MCLog("socket connect %s %u", MCUTF8(mHostname), mPort);
+        if(mHostname==NULL)
+        {
+            MCLog("connect error - hostname is NULL");
+            * pError = ErrorConnection;
+            goto close;
+        }
         r = mailimap_socket_connect_voip(mImap, MCUTF8(mHostname), mPort, isVoIPEnabled());
         MCLog("socket connect %i", r);
         if (hasError(r)) {
@@ -2727,6 +2733,9 @@ IndexSet * IMAPSession::search(String * folder, IMAPSearchKind kind, String * se
 
 static struct mailimap_search_key * searchKeyFromSearchExpression(IMAPSearchExpression * expression)
 {
+    if(expression==NULL)
+        return NULL;
+
     switch (expression->kind()) {
         case IMAPSearchKindAll:
         {

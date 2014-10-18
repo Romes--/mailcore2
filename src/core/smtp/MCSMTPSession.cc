@@ -647,8 +647,9 @@ void SMTPSession::sendMessage(Address * from, Array * recipients, Data * message
         mShouldDisconnect = true;
         goto err;
     }
-    else if (r == MAILSMTP_ERROR_EXCEED_STORAGE_ALLOCATION) {
-        if (response->locationOfString(MCSTR("5.7.0")) != -1) {
+    else if (r == MAILSMTP_ERROR_EXCEED_STORAGE_ALLOCATION)
+    {
+        if(response!=NULL && response->locationOfString(MCSTR("5.7.0")) != -1) {
             * pError = ErrorSendMessageIllegalAttachment;
         }
         else {
