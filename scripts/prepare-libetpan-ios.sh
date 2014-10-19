@@ -15,13 +15,13 @@ elif xcodebuild -showsdks|grep iphoneos7.0 >/dev/null ; then
 elif xcodebuild -showsdks|grep iphoneos6.1 >/dev/null ; then
 	sdkversion=6.1
     devicearchs="armv7 armv7s"
-else
+elsez
 	echo SDK not found
 	exit 1
 fi	
 
 url="https://github.com/Romes--/libetpan.git"
-rev=72a4867bdfed75ca9f6de6944d8ee92f44b6ed22
+rev=6b5315c4da3f8990d3105368e4048f024acb3c68
 
 pushd `dirname $0` > /dev/null
 scriptpath=`pwd`
