@@ -1,7 +1,7 @@
 #!/bin/sh
 
 url="https://github.com/Romes--/libetpan.git"
-rev=d06f84dcd29017d349370f7c67dd21e6de0c6b44
+rev=72a4867bdfed75ca9f6de6944d8ee92f44b6ed22
 
 pushd `dirname $0` > /dev/null
 scriptpath=`pwd`
