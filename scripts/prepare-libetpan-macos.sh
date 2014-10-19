@@ -1,7 +1,7 @@
 #!/bin/sh
 
-url="https://github.com/dinhviethoa/libetpan.git"
-rev=88a41b8a3bb02e0ad4b44975aa03e9e26f738e7d
+url="https://github.com/Romes--/libetpan.git"
+rev=b1cb09583063431e460cf2d4cf015df4d09fd475
 
 pushd `dirname $0` > /dev/null
 scriptpath=`pwd`

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-url="https://github.com/MailCore/mailcore2.git"
+url="https://github.com/Romes--/mailcore2.git"
 
 pushd `dirname $0` > /dev/null
 scriptpath=`pwd`
